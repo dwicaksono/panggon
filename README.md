@@ -2,8 +2,6 @@
 
 ![Alt text](<Panggon Map.png>)
 
-Certainly! Below is the description of the Panggon web application in Markdown format:
-
 ---
 
 ## Panggon: A Location Finder Web App
