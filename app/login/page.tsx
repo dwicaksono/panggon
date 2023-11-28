@@ -8,7 +8,6 @@ const Login = () => {
 	const { status, data: session } = useSession();
 
 	useEffect(() => {
-		console.log({ status, session }, session?.user);
 		if (status === "authenticated") {
 			redirect("/");
 		}
