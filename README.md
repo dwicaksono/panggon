@@ -1,3 +1,56 @@
+# Panggon
+
+![Alt text](<Panggon Map.png>)
+
+Certainly! Below is the description of the Panggon web application in Markdown format:
+
+---
+
+## Panggon: A Location Finder Web App
+
+### Overview
+
+Panggon, originating from the native Javanese language, is a location finder web application developed for my portfolio. It simplifies the process of locating nearby Automated Teller Machines (ATMs) by integrating Google Maps API for location tracking and navigation. The app is built using Next.js for routing, Tailwind CSS for styling, TypeScript for strong typing, and NextAuth for authentication.
+
+### Key Features
+
+1. **ATM Locator**
+
+   - Panggon enables users to find nearby ATMs effortlessly without the need to manually input location details. It leverages the Google Maps API to display precise ATM locations within the user's vicinity.
+
+2. **Next.js Router**
+
+   - The app utilizes Next.js for smooth and efficient routing, ensuring seamless navigation between different sections and functionalities.
+
+3. **Tailwind CSS Styling**
+
+   - Tailwind CSS is employed to design a clean, modern, and responsive user interface, enhancing visual appeal and usability.
+
+4. **TypeScript Integration**
+
+   - TypeScript improves code reliability and maintainability by providing strict typing and catching potential errors during development.
+
+5. **Action Server Integration**
+
+   - An action server is integrated to handle specific functionalities within the app, ensuring optimized performance and efficient task execution.
+
+6. **Google Maps API**
+
+   - Panggon integrates Google Maps API to offer interactive maps, location-based services, and precise ATM locations displayed on the map interface.
+
+7. **NextAuth for Authentication**
+   - NextAuth provides secure user access and authentication, allowing users to utilize the app's features with confidence.
+
+### Purpose
+
+Panggon serves as a demonstration of my development skills, showcasing proficiency in utilizing various technologies like Next.js, Tailwind CSS, TypeScript, NextAuth, and integrating external APIs such as Google Maps API for real-world applications.
+
+This project underscores my commitment to crafting user-friendly and functional web applications while highlighting the use of cutting-edge technologies in web development.
+
+---
+
+Feel free to adjust the content or formatting based on your preferences or specific requirements for showcasing your portfolio project.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
