@@ -1,19 +1,22 @@
-import { NextRequest, NextResponse } from "next/server";
-export async function middleware(req: NextRequest) {
-	const path = req.nextUrl.pathname;
-	console.log(path, "????");
-	// const isPublicPath = path === "/login" || path === "/singup";
+import { NextResponse } from "next/server";
 
-	// if (isPublicPath && token) {
-	// 	return NextResponse.redirect(new URL("/", req.url));
-	// }
+import { withAuth } from "next-auth/middleware";
+// import { pages } from "next/dist/build/templates/app-page";
 
-	// if (!isPublicPath && !token) {
-	// 	return NextResponse.redirect(new URL("/login", req.url));
-	// }
-	return;
-}
+export default withAuth(
+	// `withAuth` augments your `Request` with the user's token.
+	function middleware(req) {
+		const isPublicPath = req.nextUrl.pathname === "/login";
+		if (req.nextauth.token && isPublicPath) {
+			return NextResponse.redirect(new URL("/", req.url));
+		}
+
+		if (!isPublicPath && !req.nextauth.token) {
+			return NextResponse.redirect(new URL("/login", req.url));
+		}
+	}
+);
 
 export const config = {
-	matcher: ["/((?!.+\\.[\\w]+$|_next).*)", "/", "/(api|trpc)(.*)"],
+	matcher: ["/((?!.+\\.[\\w]+$|_next).*)", "/(api|trpc)(.*)"],
 };

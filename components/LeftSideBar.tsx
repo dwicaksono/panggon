@@ -3,12 +3,14 @@
 import { FaMoneyCheckDollar } from "react-icons/fa6";
 import React, { useEffect, useState } from "react";
 import { MdStoreMallDirectory } from "react-icons/md";
+import { FaSignOutAlt } from "react-icons/fa";
 import { FaGasPump } from "react-icons/fa6";
 import { GiVibratingBall } from "react-icons/gi";
 import { HiMiniViewfinderCircle } from "react-icons/hi2";
 import Draggable from "react-draggable";
 import { useRouter, useSearchParams } from "next/navigation";
 import qs from "query-string";
+import { signOut } from "next-auth/react";
 const LeftSideBar = () => {
 	const { push } = useRouter();
 	const searchParams = useSearchParams();
@@ -115,6 +117,15 @@ const LeftSideBar = () => {
 						</p>
 					</div>
 				</div>
+				{/* <div> */}
+				<div
+					className="w-full py-2 bg-indigoGlass flex flex-col item center items-center justify-center cancel-drag"
+					onClick={() => signOut()}>
+					<button>
+						<FaSignOutAlt className="text-xl text-" />
+					</button>
+				</div>
+				{/* </div> */}
 			</div>
 		</Draggable>
 	);
